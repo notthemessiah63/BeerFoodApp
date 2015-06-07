@@ -33,3 +33,8 @@ Enhancement 5 - A provision to be made for someone to add their own beer entity 
 
 Intermediate Enhancement: Fit in Additional information content with groovy information and snippets about brewing/beer and food pairings. 
 
+Included within this project is a Balsamiq storybord/wireframe; BeerFoodPairing.bmpr
+A link to my Trello planning board https://trello.com/b/KZ8HF8vS/beer-and-food-app
+
+
+
