@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'foods#index'
 
+  get 'home', to: 'foods#index'
+
 
 
 end

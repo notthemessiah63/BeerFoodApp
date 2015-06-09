@@ -1,0 +1,22 @@
+<h3>Food - Show Page</h3>
+<container class='siz40'>
+  <div>
+    <p><%= @food.name %></p>
+    <p><%= @food.style_note %></p>
+  </div>
+</container>
+<container class='siz40'>
+  <div>
+    <% @food.beers.each do |beer| %>
+      <div class="list-group-item">
+        <ul class="food">
+          <li><%= beer.name %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</container>
+
+
+
+

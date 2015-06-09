@@ -3,6 +3,14 @@ class FoodsController < ApplicationController
     @foods = Food.all
   end
 
+  def show
+    @food = Food.find(params[:id])
+  end
+
+  def new
+
+  end
+
   private
   def food_params
     params.require(:food).permit(:name, :style_note)
