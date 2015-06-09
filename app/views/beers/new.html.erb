@@ -1,0 +1,23 @@
+<%= form_for @beer do |form| %>
+  
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :brewer %>
+  <%= form.text_field :brewer %>
+
+  <%= form.label :abv %>
+  <%= form.text_field :abv %>
+
+  <%= form.label :beer_style_id %>
+  <%=form.collection_select(:beer_style_id, BeerStyle.all, :id, :style) %>
+
+  <%= form.label :abv %>
+  <%= form.text_field :abv %>
+
+  <%= form.label :image %>
+  <%= form.text_field :image %>
+
+  <%= form.submit 'Submit' %>
+
+<% end %>

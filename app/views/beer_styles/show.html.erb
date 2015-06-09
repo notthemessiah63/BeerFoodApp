@@ -7,14 +7,15 @@
 </container>
 <container class='siz40'>
   <div>
+    <h3>Beers listed within the <%= @beer_style.style %> category</h3>
     <% @beer_style.beers.each do |beer| %>
-      <li><%= beer.name %></li>
       <li><%= link_to(beer.name, beer_path(beer.id))%></li>
     <% end %>
   </div>
 </container>
 <container class='siz40'>
   <div>
+    <li><%= link_to 'Add a beer', new_beer_path %>  for Style: <%= @beer_style.style %></l1>
     <p>Container three to put groovy stuff in</p>
   </div>
 </container>
