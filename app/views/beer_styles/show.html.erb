@@ -7,7 +7,10 @@
 </container>
 <container class='siz40'>
   <div>
-    <li><%= beer.name></li>
+    <% @beer_style.beers.each do |beer| %>
+      <li><%= beer.name %></li>
+      <li><%= link_to(beer.name, beer_path(beer.id))%></li>
+    <% end %>
   </div>
 </container>
 <container class='siz40'>
