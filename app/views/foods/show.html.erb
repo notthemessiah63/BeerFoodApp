@@ -10,7 +10,8 @@
     <% @food.beers.each do |beer| %>
       <div class="list-group-item">
         <ul class="food">
-          <li><%= link_to(beer.name, beer_path(beer.id))%></li>
+          <li><%= link_to(beer.name, beer_path(beer.id))%></li
+          <p>%= matches.match_note %</p>
         </ul>
       </div>
     <% end %>
