@@ -8,7 +8,16 @@ class MatchesController < ApplicationController
   end
 
   def new
+    @match=Match.new
+  end
 
+  def create
+    match = Match.create params[:match].permit(:match_note, :beer_id, :food_id)
+    if match.save
+      redirect_to foods_path
+    else
+      render 'new'
+    end
   end
 
   private

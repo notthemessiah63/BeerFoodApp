@@ -1,5 +1,5 @@
 <h2>Beers - Index page</h2>
-<container class='siz40l'>
+<container class='siz30l'>
   <div>
     <% @beers.each do |beer| %>
       <div class="list-group-item">
@@ -10,6 +10,7 @@
     <% end %>
   </div>
 </container>
-<container class='siz40r'>
+<li><%= link_to 'Add a beer', new_beer_path %></l1>
+<container class='siz60r'>
   <div>Some groovy Stuff about beer</div>
 </container>

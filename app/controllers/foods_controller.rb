@@ -8,7 +8,7 @@ class FoodsController < ApplicationController
   end
 
   def new
-
+    @food = Food.new
   end
 
   private

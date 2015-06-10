@@ -4,11 +4,12 @@
     <p><%= image_tag @beer.image %></p>
   </div>
 </container>
-<container class='siz40l'>
+<container class='siz30l'>
   <div>
     <p>Brewery: <%= @beer.brewer %></p>
     <p>Name   : <%= @beer.name %></p>
     <p>ABV    : <%= @beer.abv %></p>
+    <p>Style  : <%= @beer.beer_style.style %></p>
     <p>Tasting notes: <%= @beer.beer_note %></p>
   </div>
 </container>

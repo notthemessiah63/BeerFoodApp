@@ -1,5 +1,4 @@
 <h3>Food - Index Page</h3>
-
 <container class='siz30l'>
   <div>
     <% @foods.each do |food| %>
@@ -13,6 +12,8 @@
 </container>
 <container class='siz60r'>
   <div>
+    <li><%= link_to 'Make a match', new_match_path %></l1>
+    <li><%= link_to 'Trying summat here', new_food_path %></l1>
     <h3>Food Pairing Tips</h3>
     <p>
       The more hop bitterness the beer has, the heartier or livelier the meal needs to be to hold its own. Don't overwhelm your palate or meal and ruin what the chef was trying to achieve.

@@ -1,0 +1,11 @@
+<container class='form'>
+  <ul>
+    <%= form_for @beer_style do |form| %>
+    <li><%= form.label :style %></li>
+    <li><%= form.text_field :style %></li>
+    <li><%= form.label :style_note %></li>
+    <li><%= form.text_field :style_note %></li>
+    <li><%= form.submit 'Submit' %></li>
+    <% end %>
+  </ul>
+</container>

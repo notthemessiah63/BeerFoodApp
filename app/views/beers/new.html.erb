@@ -1,23 +1,27 @@
-<%= form_for @beer do |form| %>
-  
-  <%= form.label :name %>
-  <%= form.text_field :name %>
+<container class='form'>
+  <ul>
+    <%= form_for @beer do |form| %>
+    
+    <li><%= form.label :name %></li>
+    <li><%= form.text_field :name %></li>
 
-  <%= form.label :brewer %>
-  <%= form.text_field :brewer %>
+    <li><%= form.label :brewer %></li>
+    <li><%= form.text_field :brewer %></li>
 
-  <%= form.label :abv %>
-  <%= form.text_field :abv %>
+    <li><%= form.label :abv %></li>
+    <li><%= form.text_field :abv %></li>
 
-  <%= form.label :beer_style_id %>
-  <%=form.collection_select(:beer_style_id, BeerStyle.all, :id, :style) %>
+    <li><%= form.label :beer_style_id %></li>
+    <li><%=form.collection_select(:beer_style_id, BeerStyle.all, :id, :style) %></li>
 
-  <%= form.label :abv %>
-  <%= form.text_field :abv %>
+    <li><%= form.label :image %></li>
+    <li><%= form.text_field :image %></li>
 
-  <%= form.label :image %>
-  <%= form.text_field :image %>
+    <li><%= form.label :beer_note %></li>
+    <li><%= form.text_field :beer_note %></li>
 
-  <%= form.submit 'Submit' %>
+    <li><%= form.submit 'Submit' %></li>
 
-<% end %>
+  <% end %>
+  </ul>
+</container>

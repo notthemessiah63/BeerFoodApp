@@ -3,17 +3,28 @@ class BeersController < ApplicationController
     @beers = Beer.all
   end
 
-  def show
-    @beer = Beer.find(params[:id])
-  end
-
   def new
     @beer = Beer.new
   end
 
+  def create
+    beer = Beer.create params[:beer].permit(:name, :brewer, :abv, :beer_note, :image, :beer_style_id)
+    if beer.save
+      redirect_to beers_path
+    else
+      render 'new'
+    end
+  end
+
+  def show
+    @beer = Beer.find(params[:id])
+  end
+
+  
+
   private
-  def food_params
-    params.require(:beer).permit(:name, :brewer, :abv, :beer_note, :beer_style_id)
+  def beer_params
+    params.require(:beer).permit(:name, :brewer, :abv, :beer_note, :image, :beer_style_id)
   end
 end
 
