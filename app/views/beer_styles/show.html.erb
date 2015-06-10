@@ -1,11 +1,11 @@
-<h2>beer styles - show page</h2>
-<container class='siz40'>
+<h2 class="main-hdr-l">beer styles - show page</h2>
+<container class='siz40l'>
   <div>
     <p>Style: <%= @beer_style.style %></p>
     <p>Style Note   : <%= @beer_style.style_note %></p>
   </div>
 </container>
-<container class='siz40'>
+<container class='siz40r'>
   <div>
     <h3>Beers listed within the <%= @beer_style.style %> category</h3>
     <% @beer_style.beers.each do |beer| %>
@@ -13,7 +13,7 @@
     <% end %>
   </div>
 </container>
-<container class='siz40'>
+<container class='siz40l'>
   <div>
     <li><%= link_to 'Add a beer', new_beer_path %>  for Style: <%= @beer_style.style %></l1>
     <p>Container three to put groovy stuff in</p>

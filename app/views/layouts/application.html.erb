@@ -7,17 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<header>
-  <container class='nav'>
-    <nav>
-      <li class='nav_menu'><a href="/foods">Home</a></li>
-      <li class='nav_menu'><a href="/beer_styles">Beer Styles</a></li>
-      <li class='nav_menu'><a href="/beers">Beers</a></li> 
-    </nav>
-  </container>
-</header>
+  <header>
+    <container class='nav'>
+      <nav>
+        <li class='nav_menu'><a href="/foods">Home</a></li>
+        <li class='nav_menu'><a href="/beer_styles">Beer Styles</a></li>
+        <li class='nav_menu'><a href="/beers">Beers</a></li> 
+      </nav>
+    </container>
+    <container class='nav'>
+      <h2>General Header goes here</h2>
+    </container>
+  </header>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
