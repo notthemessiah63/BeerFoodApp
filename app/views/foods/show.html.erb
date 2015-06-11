@@ -6,6 +6,10 @@
   </div>
 </container>
 <container class='siz60r'>
+  <ul class="ul_list">
+    <li><%= link_to 'Make a match', new_match_path, :class => 'link_line' %></l1>
+    <li><%= link_to 'Add your beer', new_beer_path, :class => 'link_line' %></l1>
+  </ul>
   <div>
     <% @food.beers.each do |beer| %>
       <div class="list-group-item">

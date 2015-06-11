@@ -1,5 +1,5 @@
 <h2 class='page_hdr'>Food Pairings - new food</h2>
-<container class='form'>
+<container class='siz30l'>
   <ul class="ul_list">
     <%= form_for @food do |form| %>
     
@@ -9,7 +9,7 @@
     <li><%= form.label :style_note, :class => 'input_label' %></li>
     <li><%= form.text_area :style_note, :class => 'input1' %></li>
 
-    <li><%= form.submit 'Submit' %></li>
+    <li><%= form.submit 'Submit' , :class => 'submit_it' %></li>
 
   <% end %>
   </ul>

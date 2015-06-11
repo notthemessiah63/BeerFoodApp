@@ -1,13 +1,12 @@
 <h2 class='page_hdr'>Add a Beer Style</h2>
-<p>Enter a beer style</p>
-<container class='form'>
-  <ul>
+<container class='siz30l'>
+  <ul class="ul_list">
     <%= form_for @beer_style do |form| %>
-    <li><%= form.label :style %></li>
-    <li><%= form.text_field :style %></li>
-    <li><%= form.label :style_note %></li>
-    <li><%= form.text_field :style_note %></li>
-    <li><%= form.submit 'Submit' %></li>
+    <li><%= form.label :style, :class => 'input_label' %></li>
+    <li><%= form.text_field :style, :class => 'input1' %></li>
+    <li><%= form.label :style_note, :class => 'input_label' %></li>
+    <li><%= form.text_area :style_note, :class => 'input1' %></li>
+    <li><%= form.submit 'Submit', :class => 'submit_it' %></li>
     <% end %>
   </ul>
 </container>

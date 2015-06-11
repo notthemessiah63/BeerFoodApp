@@ -150,21 +150,30 @@ bs56 = BeerStyle.create(style: 'Dortmunder', style_note: 'Made popular in the 19
 
 
 # create 'beer' objects
-b1 = Beer.create(brewer: 'Adnams',name: 'Broadside', abv: '4.5', beer_note: 'Tastes like Adnams Broadside', beer_style_id: bs1.id, image: 'adnams_broadside.jpg')
-b2 = Beer.create(brewer: 'Theakstons',name: 'Old Peculier', abv: '4.3', beer_note: 'Tastes Like Theakstons Old Peculier', beer_style_id: bs2.id, image: 'theak_old_peculier.jpg')
-b3 = Beer.create(brewer: 'Badger',name: 'Fursty Ferret', abv: '4.4', beer_note: 'Tastes Like Badger Fursty Ferret', beer_style_id: bs5.id, image: 'badger_fursty_ferret.jpg')
-b4 = Beer.create(brewer: 'Adnams',name: 'Innovation', abv: '6.7', beer_note: 'Tastes Like Badger Fursty Ferret', beer_style_id: bs9.id, image: 'ai-s.jpg')
+b1 = Beer.create(brewer: 'Adnams',name: 'Broadside', abv: '6.3', beer_note: 'Broadside is brewed to commemorate the Battle of Sole Bay (1672). This dark ruby red beer is full of fruitcake flavours and is great savoured with some strong cheddar.', beer_style_id: bs1.id, image: 'adnams_broadside.jpg')
+b2 = Beer.create(brewer: 'Theakstons',name: 'Old Peculier', abv: '5.6', beer_note: 'The 5.6% beer that made Masham famous! 
+A rich, dark, smooth-tasting beer with an unequalled flavour. Brewed using the traditional Fuggle hop, Old Peculier is our best known beer and has a large and enthusiastic following all over Britain and around the world
+
+', beer_style_id: bs2.id, image: 'theak_old_peculier.jpg')
+b3 = Beer.create(brewer: 'Badger',name: 'Fursty Ferret', abv: '4.4', beer_note: 'Moreish & malty beer
+
+As the story goes, at one Dorset inn, inquisitive ferrets used to sneak a sample of their local brew. The sweet nutty palate, hoppy aroma and hint of Seville oranges give this tawny ale its distinctive personality. Perfect with a creamy Cheddar or indulgent pork pies.', beer_style_id: bs19.id, image: 'badger_fursty_ferret.jpg')
+b4 = Beer.create(brewer: 'Adnams',name: 'Innovation', abv: '6.7', beer_note: 'Originally brewed as a one off to celebrate the opening of our new brewhouse and our new distribution centre, it is now one of our permanent beer. The beer was created under the direction of our Chairman, Jonathan Adnams, whose instruction was to ‘Brew something to wow me’. 
+
+It came first in its class at the 2008 World beer awards and has also won a Gold medal at the 2008 BBI (British Bottlers Institute) awards.', beer_style_id: bs8.id, image: 'ai-s.jpg')
+b5 = Beer.create(brewer: 'Sierra Nevada',name: 'Bigfoot', abv: '6.7', beer_note: 'No notes at this time', beer_style_id: bs2.id, image: 'sierra_nevada_bigfoot.jpg')
+b6 = Beer.create(brewer: 'Adnams',name: 'Southwod bitter', abv: '4.5', beer_note: 'Southwold Jack is one of Adnams oldest & most loyal figureheads, that is why we have chosen him to be the icon for one of our most famous beers. Southwold Bitter is a beautiful copper coloured beer with a distinctive, lingering hoppiness.', beer_style_id: bs14.id, image: 'adnams_bitter.jpg')
 
 # create food objects
-f1 = Food.create(name: 'French', style_note: 'Tastes like French food')
-f2 = Food.create(name: 'Indian', style_note: 'Tastes like Indian food')
-f3 = Food.create(name: 'Japanese', style_note: 'Tastes like Japanese food')
-f4 = Food.create(name: 'English', style_note: 'Tastes like English food')
+f1 = Food.create(name: 'Spaghetti bolognaise', style_note: 'My very best Spaghetti Bolognese, gorgeously meaty with a chilli kick!')
+f2 = Food.create(name: 'Chicken Korma', style_note: 'Coconut and almonds give this mild korma its distinctive richness. Take a few minutes to prepare it, then leave it in the oven to cook. Serve with basmati rice or warm naan bread. Delicious!')
+f3 = Food.create(name: 'Shepherds pie', style_note: 'A classic shepherds pie recipe with beautiful lamb shoulder instead of mince – made for rainy days! Topped with rosemary-spiked creamy mash')
+f4 = Food.create(name: 'Beef wellington', style_note: 'This recipe is a nod to the traditional beef Wellington, but I used minced beef instead of beef fillet and throwing in a hint of chilli and cumin for an updated flavour. You could also use pork mince, lamb mince or even a mixture, and, during the season, make it even more interesting by adding some game. And, as you have probably noticed, I have decided to make mine into individual rolls, so everyone gets their own. What a treat!')
 
 # #Method 2
 # o2 = Order.create(order_reference: 'fj#4fsew', amount: 70, customer_id: c2.id)
 # o1.order_products.create(product_id: p3.id)
-f1.matches.create(beer_id: b1.id, match_note: 'This french food goes well with Adnams Broadside')
-f1.matches.create(beer_id: b2.id, match_note: 'This food from France goes nicely with a spot of Old peculiar')
+f1.matches.create(beer_id: b1.id, match_note: 'This spag bol went well with Adnams Broadside, both rather robust flavours')
+f1.matches.create(beer_id: b2.id, match_note: 'Spaghetti bolognaise, strangely goes nicely with a spot of Old peculiar')
 
 
