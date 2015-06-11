@@ -1,4 +1,4 @@
-<h2>Beers - Show Page</h2>
+<h2 class='page_hdr'>Beer - <%= @beer.name %></h2>
 <container class='img15'>
   <div>
     <p><%= image_tag @beer.image %></p>
@@ -15,6 +15,7 @@
 </container>
 <container class='siz40r'>
   <div>
-    <p>Container three to put groovy stuff in</p>
+    <p>Style notes for <%= @beer.beer_style.style %></p>
+    <p><%= @beer.beer_style.style_note %></p>
   </div>
 </container>

@@ -1,4 +1,4 @@
-<h3>Food - Show Page</h3>
+<h2 class='page_hdr'>Food pairings - <%= @food.name %></h2>
 <container class='siz30l'>
   <div>
     <p><%= @food.name %></p>
@@ -9,10 +9,12 @@
   <div>
     <% @food.beers.each do |beer| %>
       <div class="list-group-item">
-        <ul class="food">
-          <li><%= link_to(beer.name, beer_path(beer.id))%></li>
+        <ul class="ul_list">
+          <li><%= link_to(beer.name, beer_path(beer.id), :class => 'link_line')%></li>
           <% beer.matches.each do |match| %>
-            <p><%= match.match_note %></p>
+            <% if match.food_id == @food.id %>
+              <p><%= match.match_note %></p>
+            <% end %>
           <% end %>
         </ul>
       </div>

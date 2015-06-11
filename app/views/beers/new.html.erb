@@ -1,24 +1,25 @@
+<h2 class='page_hdr'>Beers - enter a beer</h2>
 <container class='form'>
-  <ul>
+  <ul class="ul_list">
     <%= form_for @beer do |form| %>
     
-    <li><%= form.label :name %></li>
-    <li><%= form.text_field :name %></li>
+    <li><%= form.label :name, :class => 'input_label' %></li>
+    <li><%= form.text_field :name, :class => 'input1' %></li>
 
-    <li><%= form.label :brewer %></li>
-    <li><%= form.text_field :brewer %></li>
+    <li><%= form.label :brewer, :class => 'input_label' %></li>
+    <li><%= form.text_field :brewer, :class => 'input1' %></li>
 
-    <li><%= form.label :abv %></li>
-    <li><%= form.text_field :abv %></li>
+    <li><%= form.label :abv, :class => 'input_label' %></li>
+    <li><%= form.text_field :abv, :class => 'input1' %></li>
 
-    <li><%= form.label :beer_style_id %></li>
-    <li><%=form.collection_select(:beer_style_id, BeerStyle.all, :id, :style) %></li>
+    <li><%= form.label :beer_style_id, :class => 'input_label' %></li>
+    <li><%=form.collection_select(:beer_style_id, BeerStyle.all, :id, :style, {:prompt=>true}, {:class=>'input1'} ) %></li>
 
-    <li><%= form.label :image %></li>
-    <li><%= form.text_field :image %></li>
+    <li><%= form.label :image, :class => 'input_label' %></li>
+    <li><%= form.text_field :image, :class => 'input1' %></li>
 
-    <li><%= form.label :beer_note %></li>
-    <li><%= form.text_field :beer_note %></li>
+    <li><%= form.label :beer_note, :class => 'input_label' %></li>
+    <li><%= form.text_area :beer_note, :class => 'input1' %></li>
 
     <li><%= form.submit 'Submit' %></li>
 

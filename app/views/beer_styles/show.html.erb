@@ -1,4 +1,4 @@
-<h2 class="main-hdr-l">beer styles - show page</h2>
+<h2 class='page_hdr'>Beer Style - <%= @beer_style.style %></h2>
 <container class='siz40l'>
   <div>
     <p>Style: <%= @beer_style.style %></p>
@@ -7,15 +7,15 @@
 </container>
 <container class='siz40r'>
   <div>
-    <h3>Beers listed within the <%= @beer_style.style %> category</h3>
+    <h3 class'info_hdr'>Beers listed within the <%= @beer_style.style %> category</h3>
     <% @beer_style.beers.each do |beer| %>
-      <li><%= link_to(beer.name, beer_path(beer.id))%></li>
+      <li><%= link_to(beer.name, beer_path(beer.id), :class => 'link_line')%></li>
     <% end %>
   </div>
 </container>
 <container class='siz40l'>
   <div>
-    <li><%= link_to 'Add a beer', new_beer_path %>  for Style: <%= @beer_style.style %></l1>
+    <li><%= link_to 'Add a beer', new_beer_path, :class => 'link_line' %>  for Style: <%= @beer_style.style %></l1>
     <p>Container three to put groovy stuff in</p>
   </div>
 </container>
