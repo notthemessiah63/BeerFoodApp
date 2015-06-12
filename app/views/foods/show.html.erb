@@ -10,6 +10,7 @@
     <li><%= link_to 'Make a match', new_match_path, :class => 'link_line' %></l1>
     <li><%= link_to 'Add your beer', new_beer_path, :class => 'link_line' %></l1>
   </ul>
+  <p>Beer pairings shown below for your chosen meal..</p>
   <div>
     <% @food.beers.each do |beer| %>
       <div class="list-group-item">
