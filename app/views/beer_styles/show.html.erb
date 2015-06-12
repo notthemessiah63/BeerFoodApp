@@ -6,16 +6,14 @@
   </div>
 </container>
 <container class='siz40r'>
+  <ul class="ul_list">
+    <li><%= link_to 'Make a match', new_match_path, :class => 'link_line' %></l1>
+    <li><%= link_to 'Add your beer', new_beer_path, :class => 'link_line' %></l1>
+  </ul>
   <div>
     <h3 class'info_hdr'>Beers listed within the <%= @beer_style.style %> category</h3>
     <% @beer_style.beers.each do |beer| %>
       <li><%= link_to(beer.name, beer_path(beer.id), :class => 'link_line')%></li>
     <% end %>
-  </div>
-</container>
-<container class='siz40l'>
-  <div>
-    <li><%= link_to 'Add a beer', new_beer_path, :class => 'link_line' %>  for Style: <%= @beer_style.style %></l1>
-    <p>Container three to put groovy stuff in</p>
   </div>
 </container>
